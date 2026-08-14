@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "vanilla-refined-features",
+	"version": "${version}",
+	"name": "Vanilla Refined: Features",
+	"description": "A small, cozy addition to vanilla Minecraft. Adds new items, mechanics, and tweaks that blend seamlessly into the game",
+	"authors": [
+		"corfaction"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/vanilla-refined-features/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.corfaction.vanillarefined.features.VanillaRefinedFeatures"
+		],
+		"client": [
+			"net.corfaction.vanillarefined.features.client.VanillaRefinedFeaturesClient"
+		],
+		"fabric-datagen": [
+			"net.corfaction.vanillarefined.features.client.VanillaRefinedFeaturesDataGenerator"
+		]
+	},
+	"mixins": [
+		"vanilla-refined-features.mixins.json",
+		{
+			"config": "vanilla-refined-features.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
