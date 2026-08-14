@@ -1,5 +1,7 @@
 package net.corfaction.vanillarefined.features;
 
+import net.corfaction.vanillarefined.features.entity.register.ModEntity;
+import net.corfaction.vanillarefined.features.item.register.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -17,7 +19,8 @@ public class VanillaRefinedFeatures implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModEntity.register();
+		ModItems.registerCreativeTabItems();
 	}
 
 	public static Identifier id(String path) {
