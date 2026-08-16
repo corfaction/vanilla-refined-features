@@ -11,6 +11,6 @@ public class ModItemIds {
     public static final ResourceKey<Item> BOGROT_SPAWN_EGG = create("bogrot_egg");
 
     public static ResourceKey<Item> create(String name) {
-        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(VanillaRefinedFeatures.MOD_ID, name));
+        return ResourceKey.create(Registries.ITEM, VanillaRefinedFeatures.id(name));
     }
 }

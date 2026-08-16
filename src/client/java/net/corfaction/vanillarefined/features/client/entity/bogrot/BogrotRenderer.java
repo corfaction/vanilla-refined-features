@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.entity.state.ZombieRenderState;
 import net.minecraft.resources.Identifier;
 
 public class BogrotRenderer extends ZombieRenderer {
-    private static final Identifier TEXTURE = Identifier.fromNamespaceAndPath(VanillaRefinedFeatures.MOD_ID, "textures/entity/bogrot.png");
+    private static final Identifier TEXTURE = VanillaRefinedFeatures.id("textures/entity/bogrot.png");
 
     public BogrotRenderer(EntityRendererProvider.Context context) {
         super(context); // 0.375 shadow radius
